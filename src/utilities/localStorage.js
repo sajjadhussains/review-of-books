@@ -18,7 +18,13 @@ const savedReadList = (id) => {
   const exist = storedReadLists.find((bookId) => bookId === id);
   if (!exist) {
     storedReadLists.push(id);
+    const storedWishLists = getStoredWishList().filter(
+      (bookId) => bookId !== id
+    );
+    // console.log(storedWishLists);
     localStorage.setItem("read-list", JSON.stringify(storedReadLists));
+    localStorage.removeItem("wish-list");
+    localStorage.setItem("wish-list", JSON.stringify(storedWishLists));
     return true;
   } else {
     return false;

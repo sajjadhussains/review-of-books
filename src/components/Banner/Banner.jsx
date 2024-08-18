@@ -1,5 +1,6 @@
 import React from "react";
 import banner_img from "../../assets/images/banner_img.png";
+import { NavLink } from "react-router-dom";
 const Banner = () => {
   return (
     <div className="my-12 bg-[#1313130d]">
@@ -10,12 +11,12 @@ const Banner = () => {
               Books to freshen <br />
               up your bookshelf
             </h1>
-            <a
-              href=""
+            <NavLink
+              to={"/listed-books"}
               className="btn bg-[#23BE0A] text-white mt-10 hover:text-black"
             >
               View the List
-            </a>
+            </NavLink>
           </div>
           <div className="md:w-2/5">
             <img src={banner_img} alt="" className="w-full" />
