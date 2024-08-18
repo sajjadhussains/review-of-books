@@ -3,9 +3,11 @@ import "../../index.css";
 import { CiLocationOn } from "react-icons/ci";
 import { IoPeopleOutline } from "react-icons/io5";
 import { MdOutlineContactPage } from "react-icons/md";
+import { NavLink } from "react-router-dom";
 
 const ShowBookList = ({ data }) => {
   const {
+    bookId,
     image,
     bookName,
     author,
@@ -59,9 +61,11 @@ const ShowBookList = ({ data }) => {
             <button className="px-4 py-2 bg-[#328eff26] rounded-[1.875rem] font-work-sans text-[#328EFF]">
               Rating:{rating}
             </button>
-            <button className="px-4 py-2 bg-[#23BE0A] rounded-[1.875rem] font-work-sans text-white">
-              View Details
-            </button>
+            <NavLink to={`/book/${bookId}`}>
+              <button className="px-4 py-2 bg-[#23BE0A] rounded-[1.875rem] font-work-sans text-white">
+                View Details
+              </button>
+            </NavLink>
           </div>
         </div>
       </div>

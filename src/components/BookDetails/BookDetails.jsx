@@ -50,7 +50,7 @@ const BookDetails = () => {
     <div className="mx-10 md:mx-0 md:flex md:justify-start md:gap-12 mt-12">
       <ToastContainer />
       <div className="w-full py-10 md:py-0 md:w-[47%] md:h-[44.44rem] border flex justify-center items-center bg-[#F3F3F3]">
-        <figure className="md:w-[26.5rem] md:-h[35.25rem]">
+        <figure className="md:w-[26.563rem] md:h-[35.25rem]">
           <img className="w-full" src={image} alt="" />
         </figure>
       </div>
