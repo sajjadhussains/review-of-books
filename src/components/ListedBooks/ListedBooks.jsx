@@ -26,6 +26,7 @@ const ListedBooks = () => {
           readIds.includes(book.bookId)
         );
         setDatas(initialData);
+        // console.log(data);
       });
   }, []);
 
@@ -42,16 +43,46 @@ const ListedBooks = () => {
     const wishLists = books.filter((book) => wishIds.includes(book.bookId));
     setDatas(wishLists);
   };
+  const handleBooksFilter = (filter) => {
+    let sortedData = [...datas];
+    if (filter === "rating") {
+      sortedData.sort((a, b) => b.rating - a.rating);
+    } else if (filter === "pages") {
+      sortedData.sort((a, b) => b.totalPages - a.totalPages);
+    } else if (filter === "publish") {
+      sortedData.sort((a, b) => b.yearOfPublishing - a.yearOfPublishing);
+    }
 
+    setDatas(sortedData);
+  };
   return (
     <div className="mt-6">
       <div className="bg-[#1313130d] h-24 flex justify-center items-center">
         <h1 className="text-3xl font-bold font-work-sans">Books</h1>
       </div>
       <div className="flex justify-center mt-8">
-        <button className="bg-[#23BE0A] px-5 py-3 rounded-lg flex items-center gap-1 text-white font-work-sans text-lg">
-          Sort by <img src={filter_icon} alt="" />
-        </button>
+        <div className="dropdown">
+          <div
+            tabIndex={0}
+            className="bg-[#23BE0A] px-5 py-3 rounded-lg flex items-center gap-1 text-white font-work-sans text-lg cursor-pointer hover:shadow-lg"
+          >
+            Sort by <img src={filter_icon} alt="" />
+          </div>
+          <ul
+            tabIndex={0}
+            className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
+          >
+            <li onClick={() => handleBooksFilter("rating")}>
+              <a>Rating</a>
+            </li>
+            <li onClick={() => handleBooksFilter("pages")}>
+              <a>Number of Pages</a>
+            </li>
+            <li onClick={() => handleBooksFilter("publish")}>
+              <a>Published Year</a>
+            </li>
+          </ul>
+        </div>
       </div>
       {isTrue ? (
         <ReadBtn
