@@ -7,6 +7,7 @@ import {
 } from "../../utilities/localStorage";
 import ReadBtn from "../ReadBtn/ReadBtn";
 import WishBtn from "../WishBtn/WishBtn";
+import ShowBookList from "../ShowBookList/ShowBookList";
 
 const ListedBooks = () => {
   const [books, setBooks] = useState([]);
@@ -53,39 +54,21 @@ const ListedBooks = () => {
         </button>
       </div>
       {isTrue ? (
-        <div className="flex items-center font-work-sans h-12 mt-12">
-          <button
-            onClick={handleReadList}
-            className="px-3 py-3 rounded-t-lg rounded-b-sm border-t border-l border-r border-t-[#1313134d] border-l-[#1313134d] border-r-[#1313134d] w-[14rem] h-full text-[#131313cc]"
-          >
-            Read Books
-          </button>
-          <div className="border-b border-b-[#1313134d] w-full">
-            <button
-              className="px-3 py-3 text-[#13131380]"
-              onClick={handleWishList}
-            >
-              Wishlist Books
-            </button>
-          </div>
-        </div>
+        <ReadBtn
+          handleReadList={handleReadList}
+          handleWishList={handleWishList}
+        ></ReadBtn>
       ) : (
-        <div className="flex items-center font-work-sans h-12 mt-12">
-          <button
-            onClick={handleReadList}
-            className="px-3 py-3 rounded-t-lg w-[14rem] border-b border-b-[#1313134d] text-[#13131380]"
-          >
-            read Books
-          </button>
-          <button
-            className="px-3 py-3 text-[#131313cc] rounded-t-lg border-t border-l border-r border-t-[#1313134d] border-l-[#1313134d] border-r-[#1313134d] w-[14rem]"
-            onClick={handleWishList}
-          >
-            Wishlist Books
-          </button>
-          <div className="w-full h-full border-b border-b-[#1313134d]"></div>
-        </div>
+        <WishBtn
+          handleReadList={handleReadList}
+          handleWishList={handleWishList}
+        ></WishBtn>
       )}
+      <div className="mt-8">
+        {datas.map((data, idx) => (
+          <ShowBookList key={idx} data={data}></ShowBookList>
+        ))}
+      </div>
     </div>
   );
 };
