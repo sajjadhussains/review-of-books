@@ -53,7 +53,7 @@
   },
   {
     "bookId": "5",
-    "bookName": "Becoming",
+    "bookName": "Think and Grow Rich",
     "author": "Michelle Obama",
     "image": "https://i.ibb.co/BcXdKTW/kindpng-4022054-1.png",
     "review": "An inspiring and candid memoir from the former First Lady of the United States. Michelle Obama reflects on her journey from the South Side of Chicago to the White House, sharing insights into her personal life, her role as a mother, and her ongoing quest for a better world.",
@@ -79,7 +79,7 @@
   },
   {
     "bookId": "7",
-    "bookName": "A Brief History of Humankind",
+    "bookName": "Rich Dad Poor Dad",
     "author": "Yuval Noah Harari",
     "image": "https://i.ibb.co/JCsBTd1/kindpng-5624060-1.png",
     "review": "A thought-provoking exploration of human evolution, Harari's book delves into the significant milestones of our species’ history. From the rise of Homo sapiens to the modern technological era, Harari offers a compelling narrative that challenges conventional views on history, culture, and the future of humanity.",

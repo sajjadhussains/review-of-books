@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Header.css";
+
 const Header = () => {
   return (
     <div className="navbar">
@@ -24,7 +25,7 @@ const Header = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            className="font-work-sans menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
             <li className="">
               <NavLink
@@ -63,12 +64,36 @@ const Header = () => {
                 Pages to Read
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to="/learning"
+                className={({ isActive }) =>
+                  isActive
+                    ? "border border-[#23BE0A] bg-white text-[#23BE0A]"
+                    : ""
+                }
+              >
+                Learning from books
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="authors"
+                className={({ isActive }) =>
+                  isActive
+                    ? "border border-[#23BE0A] bg-white text-[#23BE0A]"
+                    : ""
+                }
+              >
+                Authors
+              </NavLink>
+            </li>
           </ul>
         </div>
         <h1 className="text-3xl font-bold">Book Vibe</h1>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="font-work-sans text-lg menu menu-horizontal px-1">
           <li>
             <NavLink
               to="/"
@@ -104,6 +129,30 @@ const Header = () => {
               }
             >
               Pages to Read
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/learning"
+              className={({ isActive }) =>
+                isActive
+                  ? "border border-[#23BE0A] bg-white text-[#23BE0A]"
+                  : ""
+              }
+            >
+              Learning from books
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="authors"
+              className={({ isActive }) =>
+                isActive
+                  ? "border border-[#23BE0A] bg-white text-[#23BE0A]"
+                  : ""
+              }
+            >
+              Authors
             </NavLink>
           </li>
         </ul>

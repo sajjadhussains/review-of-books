@@ -63,8 +63,8 @@ const BookDetails = () => {
           <div className="py-4 border-t border-b border-[#13131326] mb-6">
             <p className="font-work-sans font-medium">{category}</p>
           </div>
-          <p className="mb-6">
-            <span className="font-bold font-work-sans">review:</span>
+          <p className="font-work-sans mb-6">
+            <span className="font-bold">review:</span>
             {review}
           </p>
           <div className="flex items-center flex-wrap pb-6 mb-6 border-b border-[#13131326] gap-8">

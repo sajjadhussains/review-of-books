@@ -6,7 +6,7 @@ const BookCard = ({ book }) => {
   const { bookId, image, tags, bookName, author, category, rating } = book;
   return (
     <Link to={`/book/${bookId}`}>
-      <div className="p-6 border border-[#13131326] rounded-2xl">
+      <div className="p-6 border border-[#13131326] rounded-2xl flex flex-col">
         <div className="md:w-80 flex justify-center bg-[#F3F3F3] rounded-2xl items-center h-56">
           <img src={image} alt="" />
         </div>
@@ -22,7 +22,7 @@ const BookCard = ({ book }) => {
           ))}
           <h1 className="text-2xl font-bold mt-4">{bookName}</h1>
           <p className="text-[#131313cc] mt-4 font-work-sans">By:{author}</p>
-          <div className="flex justify-between font-work-sans mt-10">
+          <div className="flex justify-between font-work-sans mt-10 flex-shrink">
             <p>{category}</p>
             <h1 className="flex items-center">
               <span>{rating}</span>
