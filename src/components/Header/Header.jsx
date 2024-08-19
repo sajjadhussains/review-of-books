@@ -90,7 +90,7 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <h1 className="text-3xl font-bold">Book Vibe</h1>
+        <h1 className="text-3xl font-work-sans font-bold">Book Vibe</h1>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="font-work-sans text-lg menu menu-horizontal px-1">
@@ -158,8 +158,10 @@ const Header = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn bg-[#23BE0A] text-white hover:text-black">Sign in</a>
-        <a className="btn bg-[#59C6D2] ml-4 text-white hover:text-black">
+        <a className="btn bg-[#23BE0A] text-white hover:text-black font-work-sans">
+          Sign in
+        </a>
+        <a className="btn bg-[#59C6D2] ml-4 text-white hover:text-black font-work-sans">
           Sign Up
         </a>
       </div>
