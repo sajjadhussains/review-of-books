@@ -19,5 +19,5 @@ Welcome to the Book Library Website! This project is a simple and user-friendly 
 - **Sorting Functionality**: Sort your book lists in descending order for easy navigation.
 
 - **Pages to Read Chart**: Visual representation of the total number of pages you need to read, using Recharts.
-  ## [Live-Site-Link:](https://66c2dc86d9e6ac5b4d73908d--gleaming-sunflower-69f36b.netlify.app/)
+  ## [Live-Site-Link](https://66c2dc86d9e6ac5b4d73908d--gleaming-sunflower-69f36b.netlify.app/)
 
